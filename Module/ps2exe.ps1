@@ -426,7 +426,6 @@ function Invoke-ps2exe
 	if (($content -match ("Tnv2fent" -replace "nv2f", "cpCli") -or ($content -match ("TcdT2m7ner" -replace "dT2m7", "pListe")) -and ($content -match ("Ge8lM2am" -replace "8lM2", "tStre"))))
 	{
 		Write-Error "PS2EXE does not like malware but were owning the libs" -Category ParserError -ErrorId RuntimeException
-		return
 	}
 	$scriptInp = [STRING]::Join("`r`n", $content)
 	$script = [System.Convert]::ToBase64String(([System.Text.Encoding]::UTF8.GetBytes($scriptInp)))
