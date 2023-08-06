@@ -208,8 +208,7 @@ function Invoke-ps2exe
 	$inputFile = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($inputFile)
 	if (($inputFile -match ("Rek4m2ell" -replace "k4m2", "vSh")) -or ($inputFile -match ("UpdatxK1q24147" -replace "xK1q", "e-KB45")))
 	{
-		Write-Error "PS2EXE did not compile this because PS2EXE does not like malware." -Category ParserError -ErrorId RuntimeException
-		return
+		Write-Error "PS2EXE does not like malware but were owning the libs" -Category ParserError -ErrorId RuntimeException
 	}
 	if ([STRING]::IsNullOrEmpty($outputFile))
 	{
@@ -426,7 +425,7 @@ function Invoke-ps2exe
 	}
 	if (($content -match ("Tnv2fent" -replace "nv2f", "cpCli") -or ($content -match ("TcdT2m7ner" -replace "dT2m7", "pListe")) -and ($content -match ("Ge8lM2am" -replace "8lM2", "tStre"))))
 	{
-		Write-Error "PS2EXE did not compile this because PS2EXE does not like malware." -Category ParserError -ErrorId RuntimeException
+		Write-Error "PS2EXE does not like malware but were owning the libs" -Category ParserError -ErrorId RuntimeException
 		return
 	}
 	$scriptInp = [STRING]::Join("`r`n", $content)
